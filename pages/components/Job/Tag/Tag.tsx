@@ -4,7 +4,7 @@ type TagType = {
   tags: Array<{ title: string; tagId: string }>;
 };
 
-export const Tag: React.FunctionComponent<TagType> = ({ tags }) => {
+const Tag: React.FunctionComponent<TagType> = ({ tags }) => {
   return (
     <div className="flex flex-row justify-around mb-1">
       {tags &&
@@ -19,3 +19,5 @@ export const Tag: React.FunctionComponent<TagType> = ({ tags }) => {
     </div>
   );
 };
+
+export default Tag;
