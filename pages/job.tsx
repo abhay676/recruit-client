@@ -1,19 +1,15 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import {
-  GrLinkedinOption,
-  GrTwitter,
-  GrFacebook,
-  GrInstagram,
-  GrMail,
-  GrLink,
-  GrWaypoint,
-} from 'react-icons/gr';
-import { Button, Tooltip } from '@chakra-ui/react';
+import { GrWaypoint } from 'react-icons/gr';
+import { Button } from '@chakra-ui/react';
 import Description from './components/Job/Description/Description';
 import job from '../json/jobInfo.json';
+import company from '../json/companyInfo.json';
 import Company from './components/Job/Company/Company';
 import Banner from './components/Job/Banner/Banner';
+import Sidebar from './components/Job/Sidebar/Sidebar';
+import ApplyCard from './components/Job/ApplyCard/ApplyCard';
+import ShareCard from './components/Job/ShareCard/ShareCard';
 
 const Job: NextPage = () => {
   return (
@@ -21,9 +17,9 @@ const Job: NextPage = () => {
       <Head>
         <title>Company Name</title>
       </Head>
-      <div>
+      <div className="lg:hidden">
         <div>
-          <div className=" flex justify-between fixed w-full top-0 bg-red-300 items-center">
+          <div className="flex justify-between fixed w-full top-0 bg-red-200 items-center lg:hidden">
             <h3 className="font-bold text-2xl text-center p-2  text-white ">
               Teamzo
             </h3>
@@ -35,80 +31,17 @@ const Job: NextPage = () => {
               Apply Now
             </Button>
           </div>
-          <div className="flex justify-between mt-14">
+          <div className="flex justify-between mt-14 lg:hidden">
             <div className="ml-2 inline-flex">
               <p className="text-gray-600 mx-2 font-semibold">Job Id:</p> 123XYZ
             </div>
           </div>
-          <div className="mt-4 border p-2 mx-4">
-            <p className="text-center mb-2 font-semibold">Share this job</p>
-            <div className="flex justify-evenly ">
-              <Tooltip label="Linkedin">
-                <div className="bg-red-200 p-2 text-black rounded-full">
-                  <GrLinkedinOption
-                    className="cursor-pointer"
-                    onClick={() =>
-                      window.open('https://twitter.com/nikk_xyz', '__blank')
-                    }
-                  />
-                </div>
-              </Tooltip>
-              <Tooltip label="Twitter">
-                <div className="bg-red-200 p-2 text-black rounded-full">
-                  <GrTwitter
-                    className="cursor-pointer"
-                    onClick={() =>
-                      window.open('https://twitter.com/nikk_xyz', '__blank')
-                    }
-                  />
-                </div>
-              </Tooltip>
-              <Tooltip label="Facebook">
-                <div className="bg-red-200 p-2 text-black rounded-full">
-                  <GrFacebook
-                    className="cursor-pointer"
-                    onClick={() =>
-                      window.open('https://twitter.com/nikk_xyz', '__blank')
-                    }
-                  />
-                </div>
-              </Tooltip>
-              <Tooltip label="Instagram">
-                <div className="bg-red-200 p-2 text-black rounded-full">
-                  <GrInstagram
-                    className="cursor-pointer"
-                    onClick={() =>
-                      window.open('https://twitter.com/nikk_xyz', '__blank')
-                    }
-                  />
-                </div>
-              </Tooltip>
-              <Tooltip label="Email">
-                <div className="bg-red-200 p-2 text-black rounded-full">
-                  <GrMail
-                    className="cursor-pointer"
-                    onClick={() =>
-                      window.open('https://twitter.com/nikk_xyz', '__blank')
-                    }
-                  />
-                </div>
-              </Tooltip>
-              <Tooltip label="Link">
-                <div className="bg-red-200 p-2 text-black rounded-full">
-                  <GrLink
-                    className="cursor-pointer"
-                    onClick={() =>
-                      window.open('https://twitter.com/nikk_xyz', '__blank')
-                    }
-                  />
-                </div>
-              </Tooltip>
-            </div>
-          </div>
+          <ShareCard classes="lg:hidden mx-4" />
         </div>
         {job.job &&
           job.job.map((j, i) => (
             <Description
+              classes="lg:hidden"
               title={j.title}
               tags={j.tags}
               description={j.description}
@@ -117,9 +50,9 @@ const Job: NextPage = () => {
           ))}
         <div>
           <Company
+            classes="lg:hidden"
             name="Teamzo"
-            description="Tempor dolore qui anim commodo exercitation Lorem anim sit consectetur non irure. Velit eiusmod ut ipsum laborum est sunt consequat amet. Qui consequat laborum pariatur eiusmod aliqua magna magna proident magna. Proident nisi Lorem voluptate voluptate incididunt amet fugiat consequat nisi. Labore ad Lorem dolore occaecat sunt dolor in Lorem est."
-            image="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAb23XtNcLB3QpIKVdxe22fj1_NmOXrfYuojNifeCzOgyi0APp9W_qOxgHQ_0RDMzAc8Y&usqp=CAU"
+            description="<p>SalesHandy is a sales engagement platform that enables sales teams to scale their email outreach operations seamlessly.</p><p>Campaigns on SalesHandy are the easiest way to schedule and send hundreds (or thousands) of multi-stage automated follow-up emails to your leads at once. You can personalize your email campaign using merge tags, and have automated follow-ups sent based on engagement (open or clicks) on the last email. You can schedule these emails to go out in your recipient’s time zone too, so your emails don’t get buried in their inbox. </p><p>Complete with add-ons like email verification and real-time notifications on email opens and clicks, along with customizable tracking links, it’s the most robust platform for sending out bulk sales emails. Two-key template shortcuts, along with team-wide template sharing and analytics help improve productivity and track results.</p><p>SalesHandy has one-click integrations with Outlook and Gmail, along with SMTP connections to all other email services. You can also automate your sales operations by connecting SalesHandy with Zapier via a webhook and integrate with 3000+ apps and services, including Hubspot, Salesforce, Slack, etc.</p><p>With over 200,000 users from companies like Amazon, Uber, Verizon, Conde Nast, Dell, Lacoste, Walmart and more — SalesHandy makes for the most trusted solution for your sales productivity and growth. </p><p>- Have a question? Shoot an email at hello@saleshandy.com</p>"
             links={[
               {
                 name: 'Website',
@@ -131,7 +64,52 @@ const Job: NextPage = () => {
             location="India"
           />
         </div>
-        <Banner />
+        <Banner classes="lg:hidden w-full" />
+      </div>
+      {/* ---------------------- Desktop ------------------ */}
+      <div>
+        <div
+          className="lg:fixed lg:flex lg:flex-row lg:justify-around lg:mt-7 
+        lg:top-0 hidden"
+        >
+          <h3
+            className="lg:font-bold lg:text-2xl lg:p-2 
+          lg:ml-6"
+          >
+            Teamzo
+          </h3>
+          {/* <p className="text-gray-600 font-semibold">Job Id: 123XYZ</p> */}
+        </div>
+        <div className="lg:grid lg:grid-flow-col hidden  lg:overflow-auto justify-items-center">
+          <Sidebar classes="lg:fixed lg:top-1/4 lg:col-span-3 left-0 lg:ml-4" />
+          <div className="col-span-2 mt-14 mr-72 ml-40 xl:mr-96 xl:ml-72">
+            {job.job &&
+              job.job.map((j, i) => (
+                <Description
+                  classes="ml-2"
+                  title={j.title}
+                  tags={j.tags}
+                  description={j.description}
+                  key={i}
+                  id={j.id}
+                />
+              ))}
+            {company.company &&
+              company.company.map((j, i) => (
+                <Description
+                  classes="ml-2"
+                  title={j.title}
+                  description={j.description}
+                  key={i}
+                  id={j.id}
+                />
+              ))}
+          </div>
+          <div className="lg:fixed lg:items-center lg:top-1/4 lg:grid-col-4 lg:right-0 lg:mr-4 lg:flex lg:flex-col lg:justify-items-center lg:mt-10 xl:mr- hidden">
+            <ApplyCard />
+            <ShareCard classes="p-2 w-full" />
+          </div>
+        </div>
       </div>
     </div>
   );

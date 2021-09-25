@@ -1,0 +1,19 @@
+{
+  "company": [
+    {
+      "title": "Company",
+      "description": "<p>SalesHandy is a sales engagement platform that enables sales teams to scale their email outreach operations seamlessly.</p><p>Campaigns on SalesHandy are the easiest way to schedule and send hundreds (or thousands) of multi-stage automated follow-up emails to your leads at once. You can personalize your email campaign using merge tags, and have automated follow-ups sent based on engagement (open or clicks) on the last email. You can schedule these emails to go out in your recipient’s time zone too, so your emails don’t get buried in their inbox. </p><p>Complete with add-ons like email verification and real-time notifications on email opens and clicks, along with customizable tracking links, it’s the most robust platform for sending out bulk sales emails. Two-key template shortcuts, along with team-wide template sharing and analytics help improve productivity and track results.</p><p>SalesHandy has one-click integrations with Outlook and Gmail, along with SMTP connections to all other email services. You can also automate your sales operations by connecting SalesHandy with Zapier via a webhook and integrate with 3000+ apps and services, including Hubspot, Salesforce, Slack, etc.</p><p>With over 200,000 users from companies like Amazon, Uber, Verizon, Conde Nast, Dell, Lacoste, Walmart and more — SalesHandy makes for the most trusted solution for your sales productivity and growth. </p><p>- Have a question? Shoot an email at hello@saleshandy.com</p>",
+      "id": "#company"
+    },
+    {
+      "title": "Benefits",
+      "description": "<p>The salary for this position is between INR 10 LPA to INR 18 LPA, matched to your experience.</p><p>Benefits at Saleshandy are all about helping you lead a healthy life outside of work.</p><p>Medical Insurance</p>",
+      "id": "#benefits"
+    },
+    {
+      "title": "Culture & Values",
+      "description": "<p>We believe the quality time to focus on work starts with quality time to think, exercise, be with family & friends, and of course, time to yourself.</p><p>We work five days a week. We provide medical insurance to all team members and compensation for books, courses you purchase for learning.</p><p>To meet everyone in person, we go for a yearly retreat — you will decide the place.We pay for whatever hardware and software you need to work and make sure you are regularly upgraded to the latest versions.</p>",
+      "id": "#culture_values"
+    }
+  ]
+}

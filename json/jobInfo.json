@@ -1,7 +1,7 @@
 {
   "job": [
     {
-      "title": "Product Designer",
+      "title": "Sr. Backend Developer — Node.js",
       "tags": [
         {
           "title": "Engineering",
@@ -9,6 +9,10 @@
         },
         {
           "title": "Full-time",
+          "tagId": "12f"
+        },
+        {
+          "title": "4-6 Year",
           "tagId": "abc"
         },
         {
@@ -16,15 +20,23 @@
           "tagId": "erf"
         }
       ],
-      "description": "Esse enim exercitation eiusmod labore consectetur amet est excepteur aliquip deserunt. Et excepteur eu minim ullamco sint. Officia elit elit ut elit deserunt consectetur quis est sint sunt ipsum qui eiusmod nisi."
+      "description": "",
+      "id": "#intro"
     },
     {
       "title": "Job Overview",
-      "description": "Tempor commodo sint non non dolor esse eiusmod non irure dolor labore exercitation consectetur. Et voluptate exercitation nulla sit. Dolor nostrud nostrud reprehenderit aute aute aliqua eiusmod fugiat sint deserunt laboris aliquip ipsum excepteur. Occaecat adipisicing voluptate officia officia magna et ut officia tempor. Laboris proident velit nostrud ut culpa deserunt consectetur in. Anim esse nulla magna aute amet ut culpa eiusmod eu proident duis ex."
+      "description": "<p>We’re hiring Sr. Backend Developer — Node.js to join our team to help shape the Backend of Saleshandy 3.</p><p>You’ll start by working on Saleshandy 3, our brand new product iteration. In 2022 we’ll launch a new product; there’s lots of impactful backend work ahead to make your mark.</p>",
+      "id": "#job_overview"
     },
     {
       "title": "Responsibility",
-      "description": "Anim aliquip proident ex ut incididunt cupidatat laborum est dolor. Fugiat consectetur sunt do tempor ut. Do elit culpa irure ipsum ad eu qui anim voluptate ullamco. Consectetur est consequat ullamco aute minim veniam sint et nisi."
+      "description": "<ul><li>You’ll start the journey by reviewing the backend systems and suggest architecture enhancements</li><li>You’ll write high-quality, maintainable code to solve complex problems</li><li>You’ll create common reusable components/libraries</li><li>You’ll evaluate new technologies and create POCs</li><li>You’ll set the direction, take ownership and see things through without a lot of oversight</li><li>You’ll optimize and scale the backend systems to meet the business growth</li><li>You’ll leverage AWS cloud services to design solution</li><li>You’ll contribute to the org. building activities — hiring, mentoring, and writing on our blog</li></ul><p>Here are some things we’ve worked on recently to give you a sense of what you’ll be doing day-to-day.</p><ul><li>Shipped an update to email sending algorithm (the core of Saleshandy 3) that adjusts to email sending schedule, email sending limit set by the user, and parallel email sending from multiple sequences</li><li>Shipped Segment + Mixpanel integration so that the product team can make data-driven decisions</li><li>Implemented Apache Kafka to setup communication between micro-services Implemented centralized events logging system to record user’s interaction for feeds</li></ul>",
+      "id": "#responsibilities"
+    },
+    {
+      "title": "Requirements",
+      "description": "<p>We’re looking for someone with solid back-end JavaScript experience.</p><p>You should be proficient in Javascript, Node.js, MySQL / Postgresql / MongoDB</p><p>You should be well-versed in REST API design and familiar with RabbitMQ or Apache Kafka.</p><p>You should be good at engineering best practices, design patterns, and data structures</p>",
+      "id": "#requirements"
     }
   ]
 }

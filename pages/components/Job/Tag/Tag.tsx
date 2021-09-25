@@ -6,7 +6,7 @@ type TagType = {
 
 const Tag: React.FunctionComponent<TagType> = ({ tags }) => {
   return (
-    <div className="flex flex-row justify-around mb-1">
+    <div className="mt-4 flex flex-row justify-evenly mb-1">
       {tags &&
         tags.map((tag) => (
           <p

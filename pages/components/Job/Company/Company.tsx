@@ -13,6 +13,7 @@ type CompanyType = {
   links: Array<Link>;
   location?: string;
   headCount: string;
+  classes?: string;
 };
 const Company: React.FunctionComponent<CompanyType> = ({
   image,
@@ -21,14 +22,21 @@ const Company: React.FunctionComponent<CompanyType> = ({
   links,
   location,
   headCount,
+  classes,
 }) => {
   return (
-    <div className="p-4 mt-2">
+    <div className={`${classes} p-4 mt-2`}>
       <p className="font-bold mb-4 text-xl">About Company</p>
-      <p className="font-semibold text-xl mb-2">{name}</p>
-      {image && <Image src={image} alt={name} width={500} height={500} />}
+      {image && (
+        <div className="text-center">
+          <Image src={image} alt={name} width={500} height={500} />
+        </div>
+      )}
       <div>
-        <div className="text-justify">{description}</div>
+        <div
+          className="text-justify"
+          dangerouslySetInnerHTML={{ __html: description }}
+        ></div>
         <div className="flex justify-evenly mt-4">
           {links &&
             links.map((link, index) => (
